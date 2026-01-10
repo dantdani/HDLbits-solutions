@@ -3,3 +3,8 @@ module top_module (
     output p1y,
     input p2a, p2b, p2c, p2d,
     output p2y );
+    nand first(p1y, p1a,p1b,p1c,p1d);
+    nand sec(p2y, p2a,p2b,p2c,p2d);
+​
+​
+endmodule
