@@ -3,3 +3,18 @@ module top_module(
     input cin,
     output cout,
     output [399:0] sum );
+    
+    wire [100:0] couts;
+    assign couts[0] = cin;
+    genvar i;
+    generate
+        for (i = 0; i < 100; i = i + 1) begin: bcd_adders
+            bcd_fadd mine(.a(a[i*4 + 3 : i*4]),
+                          .b(b[i*4 + 3 : i*4]),
+                          .cin(couts[i]),
+                          .cout(couts[i +1]),
+                          .sum(sum[i*4 + 3 : i*4]));
+        end
+    endgenerate
+​
+endmodule
