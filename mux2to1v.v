@@ -3,4 +3,6 @@ module top_module(
     input sel,
     output [99:0] out );
 
+    assign out = (sel) ? b : a;
+
 endmodule
