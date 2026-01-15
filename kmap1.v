@@ -4,4 +4,6 @@ module top_module(
     input c,
     output out  ); 
 
+    assign out = a | b | c;
+
 endmodule
