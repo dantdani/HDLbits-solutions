@@ -44,6 +44,6 @@ module mylatch(input d, e1,
     endmodule
     // have wire driven by the XOR gate
     // note this could have been done simply as follows:
-    always @(posedge clk) begin
-        out <= (in ^ out);
-    end
+    // always @(posedge clk) begin
+    //     out <= (in ^ out);
+    // end
